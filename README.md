@@ -87,7 +87,7 @@ docker run -p 8000:8000 face-verifier
 
 ```bash
 # Run test script (validates API with sample images)
-python test_api.py
+ pytest test_api.py -v
 ```
 
 ✔ Tests include:
