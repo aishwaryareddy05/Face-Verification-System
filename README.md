@@ -54,7 +54,7 @@ pip install -r requirements.txt
 python download_models.py
 
 # Run API
-uvicorn main:app --host 0.0.0.0 --port 8000
+uvicorn main:app
 ```
 
 ---
@@ -123,11 +123,14 @@ Customizable options:
 
 ```json
 {
-  "match_score": 0.8432,
+  "user_id": "string",
+  "match_score": 0.937,
   "match": true,
-  "confidence_level": "high",
-  "threshold": 0.80,
-  "status": "success"
+  "confidence_level": "medium",
+  "image_type": "selfie_to_selfie",
+  "threshold": 0.8,
+  "status": "verified",
+  "error": null
 }
 ```
 
@@ -144,5 +147,5 @@ Customizable options:
 
 ## 🛡 License
 
-MIT © [Your Name]  
+MIT ©Aishwarya  
 Uses open-source models from [InsightFace](https://github.com/deepinsight/insightface).
