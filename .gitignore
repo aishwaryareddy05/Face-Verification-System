@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environment
+venv/
+
+# Model files
+models/
+*.onnx
+*.zip
+
+# Logs and temp
+logs/
+*.log
+*.tmp
+*.bak
+
+# OS and editor files
+.DS_Store
+*.swp
+
+# VS Code settings (optional)
+.vscode/
+
+# Ignore embedded git repos
+insightface/

@@ -1,0 +1,55 @@
+{
+  "model": {
+    "name": "buffalo_l",
+    "input_size": 640,
+    "providers": ["CPUExecutionProvider"],
+    "ctx_id": 0
+  },
+  "thresholds": {
+    "id_to_selfie": 0.62,
+    "selfie_to_selfie": 0.80
+  },
+  "preprocessing": {
+    "enable_histogram_equalization": true,
+    "enable_denoising": true,
+    "min_face_size": 112,
+    "id_photo_upscale_threshold": 160,
+    "clahe_clip_limit": 3.0,
+    "clahe_tile_grid_size": [8, 8],
+    "gamma_correction": 1.2,
+    "bilateral_filter": {
+      "d": 5,
+      "sigma_color": 50,
+      "sigma_space": 50
+    },
+     "enhance_selfie": true
+  },
+  "detection": {
+    "det_size": [640, 640],
+    "min_detection_score": 0.5,
+    "max_faces": 1
+  },
+  "confidence_thresholds": {
+    "high_match": {
+      "cosine_min": 0.8,
+      "euclidean_max": 0.5
+    },
+    "medium_match": {
+      "cosine_min": 0.6,
+      "euclidean_max": 0.8
+    },
+    "high_no_match": {
+      "cosine_max": 0.3,
+      "euclidean_min": 1.2
+    },
+    "medium_no_match": {
+      "cosine_max": 0.5,
+      "euclidean_min": 0.9
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  },
+   "use_sigmoid_smoothing": true
+}
